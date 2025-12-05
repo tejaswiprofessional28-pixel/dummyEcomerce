@@ -1,0 +1,6 @@
+import express from 'express';
+import multer  from 'multer';
+
+const storage = multer.memoryStorage();
+
+export const upload = multer({storage});
