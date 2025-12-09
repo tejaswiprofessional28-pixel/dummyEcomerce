@@ -34,7 +34,7 @@ export const userLogin = async(req, res)=>{
         
         if(!matchPassword){
           
-            return res.json({message: " invalid credentails"});
+            return res.json({message: "invalid credentails"});
         }
          
         const token = jwt.sign({id: user._id, role: user.role}, process.env.JWT_SECRET, {expiresIn:"5hr"});

@@ -12,7 +12,8 @@ app.use(cors());
 app.use(express.json());
 app.use('/api/auth', Router);
 app.use('/api/product', productRouter);
-app.listen(8080, ()=>{
-    console.log("server is connected to 8080");
+app.get('/' ,(req, res)=>{
+    res.send("server found");
 })
+export default app;
 
