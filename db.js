@@ -1,8 +1,8 @@
 import mongoose, { connect } from "mongoose";
-
+import dotenv from 'dotenv';
 const database = async () =>{
     try{
-        await mongoose.connect('mongodb+srv://TejaswiMeshram:project@123@cluster0.dbdbua0.mongodb.net/?appName=Cluster0/dummyProductAdd');
+        await mongoose.connect(process.env.DB);
         console.log('database is connected');
     }
     catch(e){
